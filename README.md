@@ -13,6 +13,16 @@ git branch -D {branch-name} # delete branch
 git branch -h # List more help
 ```
 
+```bash 
+# clean up local branches that are already merged AND also removed on the remote
+git checkout main # main is your default branch. Change it to match your branch
+git pull
+
+git fetch --prune
+
+git branch --merged | grep -v "\*" | grep -v "main" | xargs git branch -d
+```
+
 ## Extra useful 
 
 ### Git stash 
