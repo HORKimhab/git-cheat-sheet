@@ -31,7 +31,20 @@ git branch --merged | grep -v "\*" | grep -v "main" | xargs git branch -d
 git stash -p -m "{your commit here}" # Stash to include message 
 git stash -u # Include unstracked 
 git stash -h # List more stash 
+
+# Warning! Make sure you not need it anymore
+git stash clear # Drop all git stash.
+
+git stash list # List git stash 
+git stash drop stash{index} # Index if 
+# e.g git stash drop stash{0}
 ```
+`git stash list`
+
+<img src="public/images/git stash list.png" alt="git statsh" title="git stash list">
+
+Git stash list image
+
 
 ## TODO
 - https://keep.google.com/u/0/#NOTE/1QkxJ35_8hle-FZB7ugJzCk-VGuSh14APK_x999FT_V4OtU_6i_T3Fn1151FZUaQ
